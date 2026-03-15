@@ -3588,9 +3588,9 @@ nvm() {
         OFFLINE_PATTERN="${provided_version}"
         if [ -n "${LTS-}" ]; then
           if [ "${LTS}" = '*' ]; then
-            OFFLINE_PATTERN="$(nvm_resolve_alias 'lts/*' 2>/dev/null || nvm_echo)"
+            OFFLINE_PATTERN="$(nvm_resolve_alias 'lts/*' 2>/dev/null)"
           else
-            OFFLINE_PATTERN="$(nvm_resolve_alias "lts/${LTS}" 2>/dev/null || nvm_echo)"
+            OFFLINE_PATTERN="$(nvm_resolve_alias "lts/${LTS}" 2>/dev/null)"
           fi
           if [ -z "${OFFLINE_PATTERN}" ]; then
             nvm_err "LTS alias '${LTS}' not found locally. Run \`nvm ls-remote --lts\` first to populate LTS aliases."
