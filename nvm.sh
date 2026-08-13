@@ -3625,7 +3625,7 @@ nvm() {
           fi
         fi
         if [ "${NVM_OFFLINE}" = 1 ]; then
-          nvm_err "Version '${provided_version}' ${LTS_MSG-}not found locally or in cache - try \`${REMOTE_CMD}\` to browse available versions."
+          nvm_err "Version '${provided_version}' ${LTS_MSG-}not installed locally - try \`${REMOTE_CMD}\` to see installed versions and aliases."
         else
           nvm_err "Version '${provided_version}' ${LTS_MSG-}not found - try \`${REMOTE_CMD}\` to browse available versions."
         fi
